@@ -5,6 +5,7 @@ classes:
   - base::puppet
   - base::motd
   - base::tools
+  - base::tmux
   - bash
   - zsh
   - ssh::authorized_keys
