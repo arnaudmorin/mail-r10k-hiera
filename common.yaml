@@ -2,3 +2,4 @@
 classes:
   - base
   - base::firewall
+  - bash
