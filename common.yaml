@@ -2,4 +2,26 @@
 classes:
   - base
   - base::firewall
+  - base::puppet
+  - base::motd
+  - base::tools
   - bash
+  - zsh
+  - ssh::authorized_keys
+  - ntp
+
+ssh_authorized_keys:
+    clef_arnaud:
+        ensure: "present"
+        user: "root"
+        type: "ssh-rsa"
+        key: "AAAAB3NzaC1yc2EAAAADAQABAAABAQC91BqdQ3a4v4Qdd2IqnJGopCM4IYIL/i6GP7TsSDczF6i2sA06vezzcVKkercHZf0udhsbDtj9WS41Q+WgE1zKLU7LaR157LUbZxPmM7WBxurOZfxwD54rMnVMwC+XKjstsxWNOP8NwEnwnm54AciUM0h7BF4bbe0I+7D688qi9nCmZhAGF7bizVeK9j90jYU6lvvGvFf8tmoAWKEKJVsn8VPxG1n/36JmlWt23fLwhl4qwtAJl/S8XxyXdU49DIKAAlTDzT+lfVuesj+wn/QS0bRNL5KJzNZ5P4PZOjSHuJ5y9glsOhv2+dTK6tkToyVyrYZwr/crqm+r9LC76KoB"
+        target: "/root/.ssh/authorized_keys"
+    clef_julien:
+        ensure: "present"
+        user: "root"
+        type: "ssh-rsa"
+        key: "AAAAB3NzaC1yc2EAAAADAQABAAABAQC91BqdQ3a4v4Qdd2IqnJGopCM4IYIL/i6GP7TsSDczF6i2sA06vezzcVKkercHZf0udhsbDtj9WS41Q+WgE1zKLU7LaR157LUbZxPmM7WBxurOZfxwD54rMnVMwC+XKjstsxWNOP8NwEnwnm54AciUM0h7BF4bbe0I+7D688qi9nCmZhAGF7bizVeK9j90jYU6lvvGvFf8tmoAWKEKJVsn8VPxG1n/36JmlWt23fLwhl4qwtAJl/S8XxyXdU49DIKAAlTDzT+lfVuesj+wn/QS0bRNL5KJzNZ5P4PZOjSHuJ5y9glsOhv2+dTK6tkToyVyrYZwr/crqm+r9LC7TODO"
+        target: "/root/.ssh/authorized_keys"
+
+base::tools::plik_token: "ENC[PKCS7,MIIBmQYJKoZIhvcNAQcDoIIBijCCAYYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEANXhVkHN9iG4vqIMJEPe5GTY0Y08C8Ghuqifa8hDysWbVmME2EoyVsXw3lsEHUXS9PWcpucl3DBQW7ro17/ldM7Jh90up2sNKW+ku2wMcINj+RQUK42xNFDsVcmcHK4VyfGT1mODx5FtZLuPTIBxsQMtrMQAflPMIIDFhbp1IvH1ZWN6Yx1QVl9b1hueYotbDtVy/FUgFXqRu99Sk2Y2F+Kv4TuVOR6sS3gWNLYvLapQHaFBB6yScuC/scOwCOihw0pa7bpmlkBNE335+utzf5FpzOqkNixm6BNBT+haPIW5cGFgQToMWsURWfFggkWc/z6a5TXEU5iF5O52yqMTXsTBcBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBBpO7BgPT8KWi5xI2QghN5GgDDKhuLuWk53hDnhqGQ/iIuMCYbS+0tbroS23iuo3GFdPw2OMMIrl1ALlkrqEvbJu7o=]"
