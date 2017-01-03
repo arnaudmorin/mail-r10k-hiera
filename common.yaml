@@ -10,7 +10,7 @@ classes:
   - ssh::authorized_keys
   - ntp
 
-ssh_authorized_keys:
+ssh::authorized_keys:
     clef_arnaud:
         ensure: "present"
         user: "root"
