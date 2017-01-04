@@ -23,7 +23,7 @@ fail2ban::package_ensure: 'latest'
 fail2ban::config_file_template: "fail2ban/%{::lsbdistcodename}/etc/fail2ban/jail.conf.erb"
 fail2ban::action: 'action_mb'
 fail2ban::bantime: 600
-fail2ban::email: "arnaud.fail2ban@%{::domain}"
+fail2ban::email: "ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAYK15mFoekCh4ZTscl7nrorx/hIVEiBymU/fQkYPWZSzgiN9Y962qdDkX8r9vtdd/02GDJa5ZbxfxRJJdUGVioxWlc5h6cPgc7+NMPzC6laQywc4l6494noJgigGpOY1vmegkP8eE0IG9J2i++cb3H8KZsTm9AH3cVi3O+11KPZqUJOdWL0f2tVCjoBe8ZFt+WN7Ovw2I75NMou+6s14uR0nTkzk1y0W18bwjz1Sv0hOiz4nQCTbTjwV0E3d5hM6Q8MI4KNfN/2O1RJqnyeOhufrzCF7J/YjaKSpYjvyVAwor3pIeqXE+d5Pr8rgav0tuYXH5DmGQPeUiRPTUR4myFTA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBDjKvWzMnn1e7Yx++/ouhoegBBsL47ORI2cUsmAvac3IVdb]@%{::domain}"
 fail2ban::jails:
   - 'ssh'
   - 'ssh-ddos'
