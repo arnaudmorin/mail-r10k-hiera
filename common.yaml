@@ -22,7 +22,7 @@ ssh::authorized_keys::keys:
         ensure: "present"
         user: "root"
         type: "ssh-rsa"
-        key: "TODO"
+        key: "AAAAB3NzaC1yc2EAAAADAQABAAABAQDfLorZu476uAtZdvXgoVnHIzxUEJsZSApJnuAQ9QR9r5dcb6PRUOBGcFQrGllOnjcSyYqA67PDnG/gyMOOCGDXxcLeYzEnzzR5KAQzZ/zKRGdS4lW5HutJCTsHL48Sikw6/rnF9hauHQeY2Ksian1+iNdSgfiqui5l7mC0iaDQvEf18GyYrZ4k2LuMiyrZZO7mbMnmJXgrO2fSALxmXbYNzIOUZxSa+2FO7jt0VXds7sshjocEPF+mowI/3zJm5+8/C17hBIyDq9mhL0wa2CYc1nTaikGnfvKcmKuwAl7Ku0n3KL6m3JcqANTRsc36C49K6tKAUdnOqkHPEX6gx7vL"
         target: "/root/.ssh/authorized_keys"
 
 base::tools::plik_token: "ENC[PKCS7,MIIBmQYJKoZIhvcNAQcDoIIBijCCAYYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEANXhVkHN9iG4vqIMJEPe5GTY0Y08C8Ghuqifa8hDysWbVmME2EoyVsXw3lsEHUXS9PWcpucl3DBQW7ro17/ldM7Jh90up2sNKW+ku2wMcINj+RQUK42xNFDsVcmcHK4VyfGT1mODx5FtZLuPTIBxsQMtrMQAflPMIIDFhbp1IvH1ZWN6Yx1QVl9b1hueYotbDtVy/FUgFXqRu99Sk2Y2F+Kv4TuVOR6sS3gWNLYvLapQHaFBB6yScuC/scOwCOihw0pa7bpmlkBNE335+utzf5FpzOqkNixm6BNBT+haPIW5cGFgQToMWsURWfFggkWc/z6a5TXEU5iF5O52yqMTXsTBcBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBBpO7BgPT8KWi5xI2QghN5GgDDKhuLuWk53hDnhqGQ/iIuMCYbS+0tbroS23iuo3GFdPw2OMMIrl1ALlkrqEvbJu7o=]"
