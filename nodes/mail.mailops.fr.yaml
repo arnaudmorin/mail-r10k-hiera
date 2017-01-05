@@ -1,5 +1,6 @@
 ---
 classes:
+  - base::fail2ban
   - mail
   - rainloop
   - fail2ban
@@ -34,5 +35,6 @@ fail2ban::jails:
 fail2ban::maxretry: 3
 fail2ban::whitelist:
   - '127.0.0.1/8'
-  - '109.190.239.134/32'
+  - '109.190.239.134/32'    # maison arnaud
+  - '51.255.164.170/32'     # myself
 
