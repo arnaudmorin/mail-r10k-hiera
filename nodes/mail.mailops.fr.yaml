@@ -4,6 +4,7 @@ classes:
   - mail
   - rainloop
   - fail2ban
+  - nextcloud
 
 # Mail configuration
 mail::server_label: 'mailops mail server'
@@ -16,8 +17,8 @@ mail::virtual_addresses:
  - 'ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAK9wmsve8Su8UtlsV47LnNKStLOplQQFV15nMl7au5/vzO9Ycs2ZTFLygi06yGFzr0fWvkTbmQhTOR3FGDpi6Do3MC6eQl9ZrdRL3Omkz4++Iv8WVdKrtnBsnvlECkXe+hScyGdpQCfNrPxmF6HjyGcrbdehffVT6BNiBOk1+KypkCz07XfzgR4ykzr2Mww/Bi3RgkpyAx7TRy2mxxntxnh8IE/RSqWubkC7l+afIw+phFFT9WyOZEAfUpsq6lylQ9fYGRmXHhbEqrNxYnndGritDFUwXv+KeCQ0hAZJuJlLwukoT/Bg88KugcX3gqvGCnctT1a8lbYk+dsYVre0UujBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBDakoaKS91dys1bAIicI0RugCBQm3jEB62wRg0mpxQqBff/kz5N/CMRFjBHcVZxERXtfQ==]'
 mail::recipient_delimiter: '.'
 mail::security_certbot_email: 'ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAJpDUd/C2NKJU9sHZZYYSxAVMhyF/U+eK3cYiszVnk8CNTZgThfzQ8ZbdZPPFs5dAAqb/wHZoQ85EckPGsZ1XLWqe/vXOoQmzUUw0MYOP58/K0x/rYVHKML3LBy8Su+zNiPgekExbo9uGbvU302J7i4ID/iTVwEeGJzM3viHRgmbnDhwHJ3UAPSITFFzPRhXjgQPMOGbErlsfyn27JVzj7frgIchDEJ3krSAIPCLRYz3P75PF6IK7a6M1GvQYaZ7wgbfnUtvfp59xO3fbFJmwfyg3T+4iAaTdEBjrmlqwScX+r91zm3hgpgDGmR/Q7zKB4V7kaTwM+gHBReP+njXnvjBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBBRdYFUQ6PqkSTQGJWpSFoAgCCtJRi2RUoHA9Vpzv2YfFOrpCfX/kQubaiygepYCNumLQ==]'
-mail::security_certbot_before: '/usr/sbin/service nginx stop > /dev/null 2>&1'
-mail::security_certbot_after: '/usr/sbin/service dovecot restart > /dev/null 2>&1; /usr/sbin/service postfix restart > /dev/null 2>&1; /usr/sbin/service nginx restart > /dev/null 2>&1' 
+#mail::security_certbot_before: '/usr/sbin/service nginx stop > /dev/null 2>&1'
+mail::security_certbot_after: '/usr/sbin/service dovecot restart > /dev/null 2>&1; /usr/sbin/service postfix restart > /dev/null 2>&1; /usr/sbin/service nginx reload > /dev/null 2>&1'
 
 # Fail2ban configuration
 fail2ban::package_ensure: 'latest'
@@ -38,3 +39,12 @@ fail2ban::whitelist:
   - '109.190.239.134/32'    # maison arnaud
   - '51.255.164.170/32'     # myself
 
+# Nextcloud configuration
+nextcloud::dbname: 'nextcloud'
+nextcloud::dbuser: 'nextcloud'
+#TODO: encrypt password and generate a stronger one
+nextcloud::dbpassword: 'nextcloud'
+nextcloud::dbhost: 'localhost'
+nextcloud::dbtype: 'mysql'
+nextcloud::docroot: '/var/www/nextcloud'
+nextcloud::domain: 'nextcloud.mailops.fr'
