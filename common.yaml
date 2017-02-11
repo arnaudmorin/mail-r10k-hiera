@@ -10,6 +10,7 @@ classes:
   - zsh
   - ssh::authorized_keys
   - ntp
+  - status
 
 ssh::authorized_keys::keys:
     clef_arnaud:
