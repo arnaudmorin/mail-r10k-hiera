@@ -5,6 +5,7 @@ classes:
   - rainloop
   - fail2ban
   - nextcloud
+  - status
 
 # Mail configuration
 mail::server_label: 'mailops mail server'
