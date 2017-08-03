@@ -9,7 +9,7 @@ classes:
 
 # Mail configuration
 mail::server_label: 'mailops mail server'
-mail::enable_antispam: true
+mail::enable_antispam: false
 mail::enable_graylisting: false
 mail::enable_managesieve: true
 mail::virtual_domains:
